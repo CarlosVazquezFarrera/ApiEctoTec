@@ -31,5 +31,21 @@ namespace ApiEctoTec.Controllers
                 return BadRequest();
             }
         }
+
+        [HttpGet("ObtenerDireccionesFiltradas")]
+
+        public async Task<IActionResult> FiltrarDirecciones([FromBody] string nombre)
+        {
+            try
+            {
+                var direccionesResponse = await _direccionService.ObtenerDireccionesFiltradas(nombre);
+                return Ok(direccionesResponse);
+            }
+            catch (Exception)
+            {
+
+                return BadRequest();
+            }
+        }
     }
 }

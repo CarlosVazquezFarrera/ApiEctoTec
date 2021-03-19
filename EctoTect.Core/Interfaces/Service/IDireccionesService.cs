@@ -17,6 +17,6 @@ namespace EctoTect.Core.Interfaces.Service
         /// Obtiene un listado filtrado de base de datos con base al parámetro en viado
         /// </summary>
         /// <returns></returns>
-        Task ObtenerDireccionesFiltradas();
+        Task<Response<List<DireccionCustomEntities>>> ObtenerDireccionesFiltradas(string ciudad);
     }
 }

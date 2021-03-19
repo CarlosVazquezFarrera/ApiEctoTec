@@ -1,6 +1,7 @@
 ﻿namespace EctoTect.Core.Services
 {
     using EctoTect.Core.CustomEntites;
+    using EctoTect.Core.DTOs;
     using EctoTect.Core.Interfaces.Repository;
     using EctoTect.Core.Interfaces.Service;
     using System.Collections.Generic;
@@ -20,9 +21,11 @@
         #endregion
 
         #region Métodos
-        public Task ObtenerDireccionesFiltradas()
+        public async Task<Response<List<DireccionCustomEntities>>> ObtenerDireccionesFiltradas(string ciudad)
         {
-            throw new System.NotImplementedException();
+            if (string.IsNullOrEmpty(ciudad))
+                return new Response<List<DireccionCustomEntities>> { Exito = false, Mensaje = "Debe enviar un parámetro"};
+            return await _direccionRepoaitory.ObtenerDireccionesFiltradas(ciudad);
         }
 
         public async Task<Response<List<DireccionCustomEntities>>> ObtenerTodasLasDirecciones()
