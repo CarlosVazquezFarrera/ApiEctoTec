@@ -1,5 +1,7 @@
 ﻿namespace EctoTect.Core.Entities
 {
+    using System.Collections.Generic;
+
     public class Entidad
     {
         public Entidad()
