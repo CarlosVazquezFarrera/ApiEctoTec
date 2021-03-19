@@ -39,22 +39,19 @@
 
                 if (resultadoDb.HasRows)
                 {
-                    if (resultadoDb.HasRows)
+                    while (resultadoDb.Read())
                     {
-                        while (resultadoDb.Read())
+                        responseDirecciones.Data.Add(new DireccionCustomEntities
                         {
-                            responseDirecciones.Data.Add(new DireccionCustomEntities
-                            {
-                                Pais = resultadoDb.GetString(0),
-                                IdPais = resultadoDb.GetInt32(1),
-                                Entidad = resultadoDb.GetString(2),
-                                IdEntidad = resultadoDb.GetInt32(3),
-                                Ciudad = resultadoDb.GetString(4),
-                                IdCiudad = resultadoDb.GetInt32(5)
-                            });
-                        }
-                        responseDirecciones.Exito = true;
+                            Pais = resultadoDb.GetString(0),
+                            IdPais = resultadoDb.GetInt32(1),
+                            Entidad = resultadoDb.GetString(2),
+                            IdEntidad = resultadoDb.GetInt32(3),
+                            Ciudad = resultadoDb.GetString(4),
+                            IdCiudad = resultadoDb.GetInt32(5)
+                        });
                     }
+                    responseDirecciones.Exito = true;
                 }
             }
             catch (Exception)
@@ -89,26 +86,23 @@
 
                 if (resultadoDb.HasRows)
                 {
-                    if (resultadoDb.HasRows)
+                    responseDirecciones.Data = new List<DireccionCustomEntities>();
+                    while (resultadoDb.Read())
                     {
-                        responseDirecciones.Data = new List<DireccionCustomEntities>();
-                        while (resultadoDb.Read())
+                        responseDirecciones.Data.Add(new DireccionCustomEntities
                         {
-                            responseDirecciones.Data.Add(new DireccionCustomEntities
-                            {
-                                Pais = resultadoDb.GetString(0),
-                                IdPais = resultadoDb.GetInt32(1),
-                                Entidad = resultadoDb.GetString(2),
-                                IdEntidad = resultadoDb.GetInt32(3),
-                                Ciudad = resultadoDb.GetString(4),
-                                IdCiudad = resultadoDb.GetInt32(5)
-                            });
-                        }
-                        responseDirecciones.Exito = true;
+                            Pais = resultadoDb.GetString(0),
+                            IdPais = resultadoDb.GetInt32(1),
+                            Entidad = resultadoDb.GetString(2),
+                            IdEntidad = resultadoDb.GetInt32(3),
+                            Ciudad = resultadoDb.GetString(4),
+                            IdCiudad = resultadoDb.GetInt32(5)
+                        });
                     }
+                    responseDirecciones.Exito = true;
                 }
             }
-            catch (Exception es)
+            catch (Exception)
             {
 
                 responseDirecciones.Mensaje = "Hubo un problema en base de datos";

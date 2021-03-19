@@ -41,6 +41,9 @@ namespace ApiEctoTec
             services.AddTransient<IDireccionRepository, DireccionRepository>();
             services.AddTransient<IDireccionesService, DireccionService>();
 
+            services.AddTransient<IUsuarioRepository, UsuarioRepository>();
+            services.AddTransient<IUsuarioService, UsuarioService>();
+
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
             //Cors

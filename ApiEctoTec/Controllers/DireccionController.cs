@@ -17,7 +17,6 @@ namespace ApiEctoTec.Controllers
         private readonly IDireccionesService _direccionService;
 
         [HttpGet("ObtenerTodasLasDirecciones")]
-
         public async Task<IActionResult> ConsultarTodasLasDirecciones()
         {
             try
@@ -33,7 +32,6 @@ namespace ApiEctoTec.Controllers
         }
 
         [HttpGet("ObtenerDireccionesFiltradas")]
-
         public async Task<IActionResult> FiltrarDirecciones([FromBody] string nombre)
         {
             try
