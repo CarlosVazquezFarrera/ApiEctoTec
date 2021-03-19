@@ -28,6 +28,8 @@ namespace ApiEctoTec
 
         public IConfiguration Configuration { get; }
 
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
@@ -41,6 +43,14 @@ namespace ApiEctoTec
 
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
+            //Cors
+            services.AddCors(o => o.AddPolicy(MyAllowSpecificOrigins, builder =>
+            {
+                builder.WithOrigins("http://localhost:4200")
+                       .AllowAnyHeader()
+                       .AllowAnyMethod();
+            }));
+
             services.AddControllers();
         }
 
@@ -53,6 +63,7 @@ namespace ApiEctoTec
             }
 
             app.UseHttpsRedirection();
+            app.UseCors(MyAllowSpecificOrigins);
 
             app.UseRouting();
 
