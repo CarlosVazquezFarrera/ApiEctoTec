@@ -1,6 +1,6 @@
 ﻿namespace EctoTect.Core.DTOs
 {
-    public class Ciudad
+    public class CiudadDTO
     {
         public int Id { get; set; }
         public int IdEntidd { get; set; }

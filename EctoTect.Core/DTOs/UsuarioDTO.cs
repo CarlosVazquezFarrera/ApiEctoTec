@@ -1,7 +1,7 @@
 ﻿namespace EctoTect.Core.DTOs
 {
     using System;
-    public class Usuario
+    public class UsuarioDTO
     {
         public Guid Id { get; set; }
         public string Nombre { get; set; }

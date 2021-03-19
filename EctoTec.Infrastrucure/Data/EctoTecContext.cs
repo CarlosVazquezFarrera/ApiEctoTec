@@ -16,8 +16,7 @@ namespace EctoTec.Infrastrucure.Data
         {
         }
 
-        public EctoTecContext(DbContextOptions<EctoTecContext> options)
-            : base(options)
+        public EctoTecContext(DbContextOptions<EctoTecContext> options): base(options)
         {
         }
 

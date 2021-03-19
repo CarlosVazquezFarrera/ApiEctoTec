@@ -1,6 +1,8 @@
 ﻿namespace EctoTect.Core.DTOs
 {
-    public class Pais
+    public class PaisDTO
     {
+        public int Id { get; set; }
+        public string Nombre { get; set; }
     }
 }

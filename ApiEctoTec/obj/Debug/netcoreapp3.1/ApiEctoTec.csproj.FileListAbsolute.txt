@@ -63,3 +63,5 @@ C:\Api\ApiEctoTec\ApiEctoTec\bin\Debug\netcoreapp3.1\EctoTec.Infrastrucure.dll
 C:\Api\ApiEctoTec\ApiEctoTec\bin\Debug\netcoreapp3.1\EctoTect.Core.dll
 C:\Api\ApiEctoTec\ApiEctoTec\bin\Debug\netcoreapp3.1\EctoTec.Infrastrucure.pdb
 C:\Api\ApiEctoTec\ApiEctoTec\bin\Debug\netcoreapp3.1\EctoTect.Core.pdb
+C:\Api\ApiEctoTec\ApiEctoTec\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Api\ApiEctoTec\ApiEctoTec\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

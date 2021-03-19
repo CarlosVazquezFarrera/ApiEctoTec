@@ -1,4 +1,8 @@
 using EctoTec.Infrastrucure.Data;
+using EctoTec.Infrastrucure.Repositories;
+using EctoTect.Core.Interfaces.Repository;
+using EctoTect.Core.Interfaces.Service;
+using EctoTect.Core.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -28,8 +32,14 @@ namespace ApiEctoTec
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext <EctoTecContext> (options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("EctoTec"))
-                );
+                options.UseSqlServer(Configuration.GetConnectionString("EctoTec"))
+            );
+            //Registro de interfaces            
+
+            services.AddTransient<IDireccionRepository, DireccionRepository>();
+            services.AddTransient<IDireccionesService, DireccionService>();
+
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
             services.AddControllers();
         }
