@@ -3,11 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiEctoTec", "ApiEctoTec\ApiEctoTec.csproj", "{E458AF9F-486B-4B0D-8059-4DC2593F1429}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiEctoTec", "ApiEctoTec\ApiEctoTec.csproj", "{E458AF9F-486B-4B0D-8059-4DC2593F1429}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EctoTect.Core", "EctoTect.Core\EctoTect.Core.csproj", "{8112C0CF-0F49-46A5-B4AC-E2DC81895CEB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EctoTect.Core", "EctoTect.Core\EctoTect.Core.csproj", "{8112C0CF-0F49-46A5-B4AC-E2DC81895CEB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EctoTec.Infrastrucure", "EctoTec.Infrastrucure\EctoTec.Infrastrucure.csproj", "{F57597B1-179A-4DC9-8599-3C3A36A6D882}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EctoTec.Infrastrucure", "EctoTec.Infrastrucure\EctoTec.Infrastrucure.csproj", "{F57597B1-179A-4DC9-8599-3C3A36A6D882}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{3027ABF8-8081-4A02-9FF8-FF04E2304B14}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\Users\carlo\Documents\SQL Server Management Studio\Tect\SP\ConsultaDireccionesSP.sql = ..\..\Users\carlo\Documents\SQL Server Management Studio\Tect\SP\ConsultaDireccionesSP.sql
+		..\..\Users\carlo\Documents\SQL Server Management Studio\Tect\CreacionBaseDatos.sql = ..\..\Users\carlo\Documents\SQL Server Management Studio\Tect\CreacionBaseDatos.sql
+		..\..\Users\carlo\Documents\SQL Server Management Studio\Tect\SP\IngresarUsuarioSP.sql = ..\..\Users\carlo\Documents\SQL Server Management Studio\Tect\SP\IngresarUsuarioSP.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
