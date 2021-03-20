@@ -1,5 +1,9 @@
-﻿namespace EctoTect.Core.Interfaces.Repository
+﻿
+namespace EctoTect.Core.Interfaces.Repository
 {
+    using EctoTect.Core.CustomEntites;
+    using EctoTect.Core.Entities;
+    using System.Threading.Tasks;
     public interface IMailRepository
     {
         /// <summary>
@@ -7,6 +11,6 @@
         /// </summary>
         /// <param name="mail"></param>
         /// <returns></returns>
-        bool EnviarMail(string mail);
+        Task<BasicResponse> EnviarMail(Usuario usuario);
     }
 }

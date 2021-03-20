@@ -1,5 +1,8 @@
 ﻿namespace EctoTect.Core.Interfaces.Service
 {
+    using EctoTect.Core.CustomEntites;
+    using EctoTect.Core.DTOs;
+    using System.Threading.Tasks;
     public interface IMailService
     {
         /// <summary>
@@ -7,6 +10,6 @@
         /// </summary>
         /// <param name="mail"></param>
         /// <returns></returns>
-        bool EnviarMail(string mail);
+        Task<BasicResponse> EnviarMail(UsuarioDTO usuario);
     }
 }

@@ -42,7 +42,12 @@
                 telefono.Value = usuario.Telefono;
                 dbCommand.Parameters.Add(telefono);
 
-             
+
+                DbParameter fechaNacimiento = dbCommand.CreateParameter();
+                fechaNacimiento.ParameterName = "FechaNacimiento ";
+                fechaNacimiento.Value = usuario.Fecha;
+                dbCommand.Parameters.Add(fechaNacimiento);
+
 
                 DbParameter ciudadNacimiento = dbCommand.CreateParameter();
                 ciudadNacimiento.ParameterName = "CiudadNacimiento ";
@@ -63,7 +68,7 @@
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
                 responseRegistro.Mensaje = "Hubo un problema en base de datos";
