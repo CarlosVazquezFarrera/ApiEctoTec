@@ -1,5 +1,87 @@
 # ApiEctoTec
 
+## endpoints del Api
+```shell
+/api/Direccion/ObtenerTodasLasDirecciones
+/api/Usuario/RegistrarUsuario
+/api/Mail/EnviarCorreo
+```
+### ObtenerTodasLasDirecciones
+Este método retorna todas las ciudades, estados y paises que se encuentran registrados en la base de datos. 
+#### verbo Http
+Tipo de petición (verbo http) `Get`
+#### Respuesta
+```json
+{
+    "exito": true,
+    "data": [
+        {
+            "pais": "México",
+            "idPais": 1,
+            "entidad": "Chiapas",
+            "idEntidad": 1,
+            "ciudad": "Tuxtla Gutierrez",
+            "idCiudad": 1
+        }..
+    ]
+}
+```
+___
+### RegistrarUsuario
+Registra un usuario en la base de datos y retorna una respuesta en la que especifica el resultado de la operación; petición exitosa o fracasada.
+
+#### verbo Http
+Tipo de petición  `Post`
+#### Parámetros 
+```json
+{
+    "nombre": "carlos",
+    "mail": "carlos@gmail.com",
+    "telefono": "9611234567",
+    "fecha": "2021-03-19",
+    "idCiudad": 1
+}
+```
+#### Respuesta  de éxito 
+```json
+{
+    "exito": true,
+    "mensaje": "Se registró el usuario de forma correcta"
+}
+```
+#### Respuesta  de fracaso
+```json
+{
+    "exito": false,
+    "mensaje": "Algún mensaje"
+}
+```
+___
+### EnviarCorreo
+Este método envía un Email personalizado al correo que se envía como parámetro
+#### verbo Http
+Tipo de petición `Post`
+#### Parámetros
+```json
+{   "mail": "carlos.vazquez.unach@gmail.com",
+    "nombre": "carlos"
+}
+```
+#### Respuesta  de éxito 
+```json
+{
+    "exito": true,
+    "mensaje": "Correo enviado con éxito"
+}
+```
+#### Respuesta  de fracaso
+```json
+{
+    "exito": false,
+    "mensaje": "Hubo un error el enviar el correo"
+}
+```
+___
 ## Requisitos previos
 Para ejecutar la aplicación de necesita de la sigueinte base de datos y procedimientos almacenados
 
